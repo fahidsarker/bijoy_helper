@@ -1,7 +1,7 @@
 name: bijoy_helper
 description: A new Flutter project.
 version: 0.0.3
-homepage:
+homepage: "https://github.com/MuhammadFahidSarker/bijoy_helper"
 
 environment:
   sdk: ">=2.16.0 <3.0.0"
