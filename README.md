@@ -9,7 +9,7 @@
 add to pubspec.yaml:
 
 ```yaml
-bijoy_helper: 0.0.3
+bijoy_helper: ^0.0.3
 ```
 
 ### import the package
