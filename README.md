@@ -2,6 +2,8 @@
 
 **Note: Fonts are not included and you have to manually setup the fonts**
 
+**This package was built from https://github.com/zarif25/unicode-to-bijoy**
+
 ## Usage
 
 ### add the dependency
