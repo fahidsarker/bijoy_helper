@@ -11,7 +11,7 @@
 add to pubspec.yaml:
 
 ```yaml
-bijoy_helper: ^0.0.3
+bijoy_helper: ^0.0.4
 ```
 
 ### import the package
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/ss_with_bijoy.jpg" alt="ss_with_bijoy" style="width:200px;"/>
+<img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/with_bijoy.jpg" alt="ss_with_bijoy" style="width:200px;"/>
 
 It also has an additional `toBijoyIf` optional param which you can use to conditionally convert (thigh can help you when you are using multiple locales)
 
@@ -130,6 +130,6 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-<img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/ss_without_bijoy.jpg" alt="ss_without_bijoy" style="width:200px;"/>
+<img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/without_bijoy.jpg" alt="ss_without_bijoy" style="width:200px;"/>
 
 Happy coding :-)
