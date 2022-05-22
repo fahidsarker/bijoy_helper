@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
 ```
 
 > Output:  
-> <img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/with_bijoy.jpg" alt="Screenshot without bijoy_helper" style="width:500px;"/>
+> <img src="https://raw.githubusercontent.com/MuhammadFahidSarker/bijoy_helper/master/screenshots/with_bijoy.jpg" alt="Screenshot without bijoy_helper" style="width:500px;"/>
 
 It also has an additional `toBijoyIf` optional param which you can use to conditionally convert (thigh can help you when you are using multiple locales)
 
@@ -132,7 +132,7 @@ class MyApp extends StatelessWidget {
 ```
 
 > Output:  
-> <img src="https://github.com/MuhammadFahidSarker/bijoy_helper/blob/master/screenshots/without_bijoy.jpg" alt="Screenshot without bijoy_helper" style="width:500px;"/>
+> <img src="https://raw.githubusercontent.com/MuhammadFahidSarker/bijoy_helper/master/screenshots/without_bijoy.jpg" alt="Screenshot without bijoy_helper" style="width:500px;"/>
 
 Notice the difference in fonts - the first one uses SutonyMJ and the second one uses default font. Hence, you dont have to worry about showing wired characters even if the bijoy font is not used.
 
