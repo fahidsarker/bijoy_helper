@@ -1,3 +1,8 @@
+## 1.0.1
+Fixed Bugs
+Added toUnicode conversion
+Updated tests
+
 ## 0.0.5
 Updated readme and usage instructions.
 

@@ -7,7 +7,8 @@ import 'package:flutter/services.dart';
 
 part 'conversion_maps.dart';
 
-part 'interpreters.dart';
+part 'utils.dart';
+part 'unicode.dart';
 
 part 'executors.dart';
 
@@ -15,11 +16,21 @@ String unicodeToBijoy(String unicode) {
   return _toBijoy(unicode);
 }
 
+String bijoyToUnicode(String bijoy) {
+  return _toUnicode(bijoy);
+}
+
 extension UnicodeBijoy on String {
   String get toBijoy => _toBijoy(this);
 
   String toBijoyIf(bool condition) {
     return condition ? toBijoy : this;
+  }
+
+  String get toUnicode => _toUnicode(this);
+
+  String toUnicodeIf(bool condition) {
+    return condition ? toUnicode : this;
   }
 }
 

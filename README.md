@@ -2,7 +2,7 @@
 
 **Note: Fonts are not included and you have to manually setup the fonts**
 
-**Thanks to zarif25 - This package was built with the help of https://github.com/zarif25/unicode-to-bijoy**
+**Thanks to zarif25 & Mad-FOX- This package was built with the help of https://github.com/zarif25/unicode-to-bijoy & https://github.com/Mad-FOX/bijoy2unicode**
 
 ## Usage
 
@@ -11,7 +11,7 @@
 add to pubspec.yaml:
 
 ```yaml
-bijoy_helper: ^0.0.4
+bijoy_helper: ^1.0.1
 ```
 
 ### import the package
