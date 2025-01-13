@@ -30,8 +30,8 @@ void main() {
     "evsjv fvlvq A‡bK my›`i KweZv i‡q‡Q|",
     "Avgv‡`i DwPZ cwi‡ek msi¶‡Y m‡PZb nIqv|",
     "evsjv‡`‡ki BwZnvm A‡bK Mfxi Ges mg…×|",
-    "ms¯‹…wZ Ges wk‡í evsjv‡`‡ki ‰ewPÎ¨ j¶Yxq|",
-    "wKQy wbi_©K kãt ‰ewPÎ, ‰ewPÎ¨, ‰ewPbª¨ eµ‍¨, wi‡cvU©, Kvh©vjq, av°©v, gy”Q©v×©b¥, gy”Q©v×©vb¥, gy”Q©y×©vb¥ |",
+    "ms¯‹…wZ Ges wk‡í evsjv‡`‡ki ‰ewPZª¨ j¶Yxq|",
+    "wKQy wbi_©K kãt ‰ewPÎ, ‰ewPZª¨, ‰ewPbª¨ eµ‍¨, wi‡cvU©, Kvh©vjq, av°©v, gy”Q©v×©b¥, gy”Q©v×©vb¥, gy”Q©y×©vb¥ |",
   ];
 
   for (int i=0; i<texts.length; i++) {

@@ -385,9 +385,11 @@ class Unicode {
     replacement = 'q'; // 'h়';
     srcString = preg_replace(pattern, replacement, srcString);
 
-    pattern = 'ত্র';
-    replacement = 'Î';
-    srcString = preg_replace(pattern, replacement, srcString);
+    // This is not working for 'নিয়ন্ত্রণ'
+    // Fix the issue for 'বৈচিত্র্য'
+    // pattern = 'ত্র';
+    // replacement = 'Î';
+    // srcString = preg_replace(pattern, replacement, srcString);
 
     pattern = '্র্য';
     replacement = 'ª¨';
