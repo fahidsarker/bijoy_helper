@@ -74,6 +74,12 @@ class Unicode {
     return false;
   }
 
+  bool isBanglaRef(String c) {
+    if (c == '©') {
+      return true;
+    }
+    return false;
+  }
 
   String reArrangeUnicodeConvertedText(String str) {
     // #mb_internal_encoding("UTF-8") # force multi-byte UTF-8 encoding
@@ -305,6 +311,47 @@ class Unicode {
     
   }
 
+  String rearrangeRefPosition(String str){
+    // Handle REF
+    // Rule: REF should be placed after the banjonborno/juktokkor
+    int i = 0;
+    while (i < mb_strlen(str)) {
+      if (i < mb_strlen(str) - 1 && isBanglaRef(mbCharAt(str, i))) {
+        // Move the REF after the banjonborno/juktokkor
+
+        // Find the first banjonborno position after the REF
+        var j = 1;
+        while (!isBanglaBanjonborno(mbCharAt(str, i + j))) {
+          if (i + j >= mb_strlen(str)) {
+            break;
+          }
+          j += 1;
+        }
+
+        if(i+j < mb_strlen(str)){
+          // Now find the last position of the banjonborno/juktokkor
+          var k = 1;
+          while ((isBanglaHalant(mbCharAt(str, i + j + k)) || mbCharAt(str, i + j + k) == '&') && i + j + k < mb_strlen(str) - 1 && !isBanglaKar(mbCharAt(str, i + j + k + 1))){
+            k += 2;
+          }
+
+          // Place the REF after the banjonborno/juktokkor
+          var temp = subString(str, 0, i);
+          temp += subString(str, i + 1, i + j);
+          temp += subString(str, i + j, i + j + k);  // Add the banjonborno/juktokkor
+          temp += mbCharAt(str, i);      // Add the REF
+          temp += subString(str, i + j + k, mb_strlen(str));
+          str = temp;
+          i += j + k + 1;
+        }else {
+          i += 1;
+        }
+      } else {
+        i += 1;
+      }
+    }
+    return str;
+  }
 
   String convertBijoyToUnicode (String srcString){
     if ( srcString.isEmpty){
@@ -334,8 +381,26 @@ class Unicode {
     replacement = 'ৌ';
     srcString = preg_replace(pattern, replacement, srcString);
 
+    pattern = 'য়';
+    replacement = 'q'; // 'h়';
+    srcString = preg_replace(pattern, replacement, srcString);
+
+    pattern = 'ত্র';
+    replacement = 'Î';
+    srcString = preg_replace(pattern, replacement, srcString);
+
+    pattern = '্র্য';
+    replacement = 'ª¨';
+    srcString = preg_replace(pattern, replacement, srcString);
+
+    pattern = 'র্';
+    replacement = '©';
+    srcString = preg_replace(pattern, replacement, srcString);
+
     //# make correction
     srcString = reArranceUnicodeTextForASCI(srcString);
+
+    srcString = rearrangeRefPosition(srcString);
 
     //#inv_conversionMap = {v: k for k, v in conversionMap.items()}
     srcString = doCharMap(srcString, _mainChars);
