@@ -45,4 +45,31 @@ void main() {
   );
   }
 
+  group('Mixed text processing', () {
+    test('processes mixed Bangla-English text correctly', () {
+      const mixedText = 'Hello বাংলা World';
+      final segments = BanglaTextProcessor.processText(mixedText);
+      
+      expect(segments.length, 3);
+      expect(segments[0], const TextSegment(text: 'Hello', isBangla: false));
+      expect(segments[1], const TextSegment(text: ' evsjv ', isBangla: true));
+      expect(segments[2], const TextSegment(text: 'World', isBangla: false));
+    });
+
+    test('handles only English text correctly', () {
+      const englishText = 'Hello World';
+      final segments = BanglaTextProcessor.processText(englishText);
+      
+      expect(segments.length, 1);
+      expect(segments[0], const TextSegment(text: 'Hello World', isBangla: false));
+    });
+
+    test('handles only Bangla text correctly', () {
+      const banglaText = 'বাংলা';
+      final segments = BanglaTextProcessor.processText(banglaText);
+      
+      expect(segments.length, 1);
+      expect(segments[0], const TextSegment(text: 'evsjv', isBangla: true));
+    });
+  });
 }
