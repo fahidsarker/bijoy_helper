@@ -3,6 +3,7 @@
 **Note: Fonts are not included and you have to manually setup the fonts**
 
 **Thanks to zarif25 & Mad-FOX- This package was built with the help of https://github.com/zarif25/unicode-to-bijoy & https://github.com/Mad-FOX/bijoy2unicode**
+**Thanks to belal-bh for contributions**
 
 ## Usage
 
@@ -11,7 +12,7 @@
 add to pubspec.yaml:
 
 ```yaml
-bijoy_helper: ^1.0.1
+bijoy_helper: ^1.1.0
 ```
 
 ### import the package
@@ -137,3 +138,4 @@ class MyApp extends StatelessWidget {
 Notice the difference in fonts - the first one uses SutonyMJ and the second one uses default font. Hence, you dont have to worry about showing wired characters even if the bijoy font is not used.
 
 Happy coding :-)
+

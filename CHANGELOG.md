@@ -1,3 +1,8 @@
+## 1.1.0
+Fixed Bugs
+Fixed Multiple Bangla font broken/inconsistent rendering and support for mixed language
+
+
 ## 1.0.1
 Fixed Bugs
 Added toUnicode conversion

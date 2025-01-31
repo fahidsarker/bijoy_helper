@@ -1,6 +1,6 @@
 name: bijoy_helper
-description: A new Flutter project.
-version: 1.0.1
+description: A Flutter package to help conversion between bijoy and unicode
+version: 1.1.0
 homepage: "https://github.com/MuhammadFahidSarker/bijoy_helper"
 
 environment:
